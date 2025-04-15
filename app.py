@@ -8,14 +8,18 @@ import urllib.parse
 from PIL import Image
 import requests
 import io
+import os
+
 
 # Load models
 basic_model = joblib.load("movie_gross_predictor.pkl")
 advanced_model = joblib.load("movie_gross_predictor_v2.pkl")
 
 # Load additional datasets
-actors_df = pd.read_csv("D:/ASOIU MASTER/II kurs II sem/Fuzzy/midterm/movies/actors.csv")
-movies_actors_df = pd.read_csv("D:/ASOIU MASTER/II kurs II sem/Fuzzy/midterm/movies/moviesactors.csv")
+actors_df = pd.read_csv(os.path.join('data', 'actors.csv'))
+movies_actors_df = pd.read_csv(os.path.join('data', 'moviesactors.csv'))
+# actors_df = pd.read_csv("D:/ASOIU MASTER/II kurs II sem/Fuzzy/midterm/movies/actors.csv")
+# movies_actors_df = pd.read_csv("D:/ASOIU MASTER/II kurs II sem/Fuzzy/midterm/movies/moviesactors.csv")
 
 st.set_page_config(layout="wide")
 st.title("\U0001F3AC Movie Box Office Predictor")

@@ -64,7 +64,7 @@ y_pred = pipeline.predict(X_test)
 mae = mean_absolute_error(y_test, y_pred)
 
 # Save the trained pipeline
-model_path = "D:\ASOIU MASTER\II kurs II sem\Fuzzy\midterm\movie_gross_predictor.pkl"
+model_path = "D:\ASOIU MASTER\II kurs II sem\Fuzzy\midterm\models\movie_gross_predictor.pkl"
 joblib.dump(pipeline, model_path)
 
 mae, model_path

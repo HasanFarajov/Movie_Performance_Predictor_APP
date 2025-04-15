@@ -70,7 +70,7 @@ pipeline = Pipeline([
 pipeline.fit(X_train, y_train)
 
 # Save updated model
-model_path = "D:\ASOIU MASTER\II kurs II sem\Fuzzy\midterm\movie_gross_predictor_v2.pkl"
+model_path = "D:\ASOIU MASTER\II kurs II sem\Fuzzy\midterm\models\movie_gross_predictor_v2.pkl"
 joblib.dump(pipeline, model_path)
 
 model_path
