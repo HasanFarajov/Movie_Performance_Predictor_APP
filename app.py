@@ -97,7 +97,6 @@ elif mode == "Advanced with Actors":
             if st.button("\U0001F9F9 Clear All Actors"):
                 st.session_state.selected_actors.clear()
                 st.session_state["Select Actors"] = []
-                st.experimental_rerun()
 
             st.markdown("---")
             for i, name in enumerate(selected_actors):
