@@ -132,7 +132,6 @@ elif mode == "Advanced with Actors":
                 with colB:
                     if st.button(f"❌", key=f"remove_{i}"):
                         st.session_state.selected_actors.remove(name)
-                        st.experimental_rerun()
 
     actors_df.to_csv("enriched_actors.csv", index=False)
 
