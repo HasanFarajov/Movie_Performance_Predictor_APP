@@ -12,8 +12,10 @@ import os
 
 
 # Load models
-basic_model = joblib.load("movie_gross_predictor.pkl")
-advanced_model = joblib.load("movie_gross_predictor_v2.pkl")
+basic_model = joblib.load(os.path.join("models", "movie_gross_predictor.pkl"))
+advanced_model = joblib.load(os.path.join("models", "movie_gross_predictor_v2.pkl"))
+# basic_model = joblib.load("movie_gross_predictor.pkl")
+# advanced_model = joblib.load("movie_gross_predictor_v2.pkl")
 
 # Load additional datasets
 actors_df = pd.read_csv(os.path.join('data', 'actors.csv'))
